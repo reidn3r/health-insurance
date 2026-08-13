@@ -1,0 +1,13 @@
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v3.15.1
+    container_name: mlflow
+    ports:
+      - "5000:5000"
+    environment:
+      MLFLOW_TRACKING_URI: ${MLFLOW_TRACKING_URI:-http://localhost:5000}
+    volumes:
+      # Mesmo caminho absoluto em host e container: o cliente MLflow resolve
+      # o artifact_uri file:// diretamente nesta pasta compartilhada.
+      - ./mlflow:/home/reidner/dev/portfolio/ds-health-insurer/mlflow
+    command: mlflow server --backend-store-uri sqlite:////home/reidner/dev/portfolio/ds-health-insurer/mlflow/backend.db --default-artifact-root file:///home/reidner/dev/portfolio/ds-health-insurer/mlflow/artifacts --host 0.0.0.0 --port 5000

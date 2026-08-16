@@ -25,3 +25,5 @@ models/
 .DS_Store
 .idea/
 .vscode/
+
+mlflow.db

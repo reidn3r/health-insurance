@@ -3,11 +3,15 @@ name = "ds-health-insurer"
 version = "0.1.0"
 requires-python = ">=3.10"
 dependencies = [
+    "catboost>=1.2.10",
     "fastapi>=0.111,<1",
+    "feature-engine>=1.9.4",
+    "ipykernel>=7.3.0",
     "jupyterlab>=4.6.3",
     "matplotlib>=3.10.9",
     "mlflow>=3,<4",
     "numpy>=2.2.6",
+    "optuna>=4.9.0",
     "pandas>=2.3.3",
     "pyyaml>=6.0.3",
     "scikit-learn>=1.7.2",

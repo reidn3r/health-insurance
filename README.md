@@ -36,7 +36,7 @@ Variáveis de ambiente (`.env`):
 
 ## Análise exploratória (`src/eda.py`)
 
-- ~88% dos clientes têm Response=0. Portanto, **dataset desbalanceado**. Acurácia é métrica enganosa.
+- Cerca de 88% dos clientes têm Response=0. Portanto, o **dataset é desbalanceado**. Acurácia é métrica enganosa.
 - Previously_Insured=1 nunca contrata novo seguro: feature altamente discriminante.
 - Candidatas a novas features: `prev_and_damage`, `log_annual_premium`, faixas de idade, frequência de `Region_Code` e `Policy_Sales_Channel`.
 

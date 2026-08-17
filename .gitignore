@@ -15,8 +15,6 @@ data/
 mlflow/
 mlruns/
 
-# Modelos/serviço
-models/
 
 # Ambiente
 .env
